@@ -1,6 +1,6 @@
 Projecto dl1 para Devlights. Primer proyecto.
 
---Creación de login (frontend)
+--Creación de login y página de registro (frontend)
 
 
 
