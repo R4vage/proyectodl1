@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -12,9 +14,10 @@
   --clr-light: hsl(0, 0%, 96%); /* Color claro. Personalmente prefiero hsl/hsla para formato de colores.*/
   --clr-dark: hsl(0, 0%, 0%); /*Color oscuro*/
   --clr-accent: hsl(225, 71%, 44%); /* Color principal o acento */
-  --clr-accentLessOpaque: hsla(210, 51%, 53%, 60%);
+  --clr-accentLessOpaque: hsla(225, 71%, 44%, 60%);
   --clr-accentEndPoint: hsl(210, 39%, 59%); /* Color secundario. Aca coloqué una version mas clara del principal, cuando se decidan colores hay que cambiar el esquema */
-  --clr-gray: #EEEEEE;
+  --clr-gray: hsl(0, 0%, 40%);
+  --clr-input: hsla(225, 71%, 44%, 10%);
 
   /*Estos son las tipografias para pantalla chica. Quedan mejor si se achica un poco la letra para mejorar el responsiveness. Hay que ver si lo usamos */
   --fs-h1: 3rem;
@@ -37,11 +40,11 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--clr-light);
+  width: 100vw;
 }
 
 code {
