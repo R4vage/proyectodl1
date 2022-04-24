@@ -59,7 +59,7 @@ export default function RegisterComponent (){
                     <input type="submit" value="Registrarme" className="loginFormularioSubmit" onClick={console.log()}/>
 
                 </form>
-                <h3 className="loginFormularioRegister">¿Ya estás registrado?<a href="/"> Clickea acá maese!!</a></h3>
+                <h3 className="loginFormularioRegister">¿Ya estás registrado? <a href="/">Clickea acá maese!!</a></h3>
             </div>
         </div>
     </>
