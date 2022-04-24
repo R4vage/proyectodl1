@@ -18,7 +18,7 @@ export default function LoginComponent (){
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(loginData)
-        if (loginData.email=="julianm" & loginData.password=="password123" & loginData.estado=="alumno")
+        if (loginData.email=="julianm@gmail.com" & loginData.password=="password123" & loginData.estado=="alumno")
         {
             alert("Exito")  
             setLoginState("exito")
@@ -28,21 +28,25 @@ export default function LoginComponent (){
             setLoginState("fallo")
         }
     };
+    
+    function forgot (){
+        alert("Para recuperar tu contraseña, envianos tus datos a: julianm@gmail.com.")  
+    }
 
     function MensajeLogin () {
         if (loginState=="exito") {
-            return <h3 className="loginExito">Ha ingresado exitosamente</h3>}
+            return <p className="loginMensaje loginExito">Ha ingresado exitosamente <br/> Sus datos son:<br/> Email: {loginData.email}<br/>Tipo: {loginData.estado}</p>}
         if (loginState=="fallo") { 
-            return <h3 className="loginExito">Datos incorrectos</h3>}
+            return <p className="loginMensaje loginFallo">Datos incorrectos</p>}
             
         }
     
     return(
     <>
         <div className="Login">
-           <MensajeLogin/>
             <div className="LoginComponent">
-                <h1>Stax Food Admin Login</h1>
+                <MensajeLogin/>
+                <h1>Login</h1>
                 <form className="loginFormulario" onSubmit={handleSubmit}>
                     <h3 className="loginFormularioSubtitle">Por favor, rellene los campos con sus credenciales únicas</h3>
                     <label className="loginFormularioInputContainer">
@@ -60,12 +64,12 @@ export default function LoginComponent (){
                         <option value="alumno">Alumno</option>
                     </select>
 
-                    <h3 className="loginFormularioForgot"><a>Forgot password?</a></h3>
+                    <h3 className="loginFormularioForgot" onClick={forgot}>Forgot password?</h3>
 
                     <input type="submit" value="Login" className="loginFormularioSubmit" onClick={console.log()}/>
 
                 </form>
-                <h3 className="loginFormularioRegister">¿Todavía no te registraste? Clickea<a> acá</a> maese!!</h3>
+                <h3 className="loginFormularioRegister">¿Todavía no te registraste? <a href="/register">Clickea acá maese!!</a></h3>
             </div>
         </div>
     </>

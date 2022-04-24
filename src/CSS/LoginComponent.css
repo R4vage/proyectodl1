@@ -6,16 +6,19 @@
     position: fixed;
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
 .LoginComponent {
     display: flex;
-    max-width: 700px;
+
     min-width: 200px;
     flex-direction: column;
     align-items: center;
     margin-block: auto;
+    margin-top: auto;
     margin-inline: auto;
     justify-content: center;
 }
@@ -23,16 +26,25 @@
 .LoginComponent h1 {
     margin-bottom: 1.5em;
     color: var(--clr-light);
+    text-align: center;
 }
 
 .loginFormulario {
     display: flex;
     flex-direction: column;
     background-color: var(--clr-light);
-    padding: 4em;
+    padding: 15%;
     border-radius: 10px;
-    width: 100%;
+    width: max-content;
     height: 100%;
+}
+
+@media(max-width: 680px){
+    .loginFormulario{
+        width:90vw; 
+        padding: 10vw;
+    }
+
 }
 
 .loginFormularioSubtitle{
@@ -71,14 +83,13 @@
     margin: 0.5em;
 }
 
-.loginFormularioSelect:hover {
-    background-color: var(--clr-accentLessOpaque) !important;
-}
+
 
 .loginFormularioForgot{
 text-align: right;
 margin-top: 0;
 color: #999999;
+cursor: pointer;
 }
 
 .loginFormularioSubmit{
@@ -111,14 +122,28 @@ color: #999999;
 
   .loginFormularioRegister{
     color: var(--clr-light);
+    text-align: center;
   }
 
-  .loginExito {
+  .loginFormularioRegister a{
+      color: aqua;
+  }
+
+  .loginMensaje {
       display:inline-block;
       margin: auto;
-      background-color: red;
       text-align: center;
+      border-radius: 10px;
+      padding: 0.7em;
+      margin-block: 0;
 
+      color: var(--clr-light);
+  }
 
+  .loginExito{
+    background-color: green;
   }
   
+  .loginFallo {
+      background-color: red;
+  }
