@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "../CSS/LoginComponent.css"
 
 
@@ -22,7 +22,7 @@ export default function LoginComponent (){
             alert("Exito")  
             setLoginState("exito")
         }
-        else if (loginData.email.length == 0, loginData.password.length == 0, loginData.estado.length == 0){ alert("Debés completar todos los campos :(") }
+        else if (loginData.email.length === 0, loginData.password.length === 0, loginData.estado.length === 0){ alert("Debés completar todos los campos :(") }
         else { 
             alert("Los datos ingresados son incorrectos :(")  
             setLoginState("fallo")
@@ -40,6 +40,15 @@ export default function LoginComponent (){
             return <p className="loginMensaje loginFallo">Datos incorrectos</p>}
         }//Mensaje ubicado arriba del formulario. En lugar de usar un booleano, use una terna de valores en strings, asi el valor de null o "" no muestra nada. Esto lo tendria que pasar a otro componente.
     
+        //Tarea para el ciclo de vida de los componentes. Dos por uno, si se quiere.
+        useEffect(() => {
+            console.log("mount")
+            return () => {
+            console.log("unmount")
+            };
+          },[]);
+        //
+
     return(
     <>
         <div className="Login">
