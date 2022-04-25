@@ -17,7 +17,7 @@ export default function LoginComponent (){
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(loginData)
-        if (loginData.email === "julianm@gmail.com" & loginData.password === "password123" & loginData.estado === "alumno")
+        if (loginData.email === "julianm@gmail.com" && loginData.password === "password123" && loginData.estado === "alumno")
         {
             alert("Exito")  
             setLoginState("exito")
