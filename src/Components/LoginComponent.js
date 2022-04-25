@@ -17,12 +17,12 @@ export default function LoginComponent (){
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(loginData)
-        if (loginData.email=="julianm@gmail.com" & loginData.password=="password123" & loginData.estado=="alumno")
+        if (loginData.email === "julianm@gmail.com" & loginData.password === "password123" & loginData.estado === "alumno")
         {
             alert("Exito")  
             setLoginState("exito")
         }
-        else if (loginData.email.length === 0, loginData.password.length === 0, loginData.estado.length === 0){ alert("Debés completar todos los campos :(") }
+        else if (loginData.email.length === 0 || loginData.password.length === 0 || loginData.estado.length === 0){ alert("Debés completar todos los campos :(") }
         else { 
             alert("Los datos ingresados son incorrectos :(")  
             setLoginState("fallo")
@@ -34,17 +34,17 @@ export default function LoginComponent (){
     }//Alerta para el botón forget
 
     function MensajeLogin () {
-        if (loginState=="exito") {
+        if (loginState==="exito") {
             return <p className="loginMensaje loginExito">Ha ingresado exitosamente <br/> Sus datos son:<br/> Email: {loginData.email}<br/>Tipo: {loginData.estado}</p>}
-        if (loginState=="fallo") { 
+        if (loginState==="fallo") { 
             return <p className="loginMensaje loginFallo">Datos incorrectos</p>}
         }//Mensaje ubicado arriba del formulario. En lugar de usar un booleano, use una terna de valores en strings, asi el valor de null o "" no muestra nada. Esto lo tendria que pasar a otro componente.
     
         //Tarea para el ciclo de vida de los componentes. Dos por uno, si se quiere.
         useEffect(() => {
-            console.log("mount")
+            console.log("loginMount")
             return () => {
-            console.log("unmount")
+            console.log("loginUnmount")
             };
           },[]);
         //
@@ -73,7 +73,7 @@ export default function LoginComponent (){
                         <option value="alumno">Alumno</option>
                     </select>
 
-                    <h3 className="loginFormularioForgot">¿Te olvidaste la contraseña? <a onClick={forgot}>Clickea aquí</a></h3>
+                    <h3 className="loginFormularioForgot">¿Te olvidaste la contraseña? <a onClick={forgot} href>Clickea aquí</a></h3>
 
                     <input type="submit" value="Login" className="loginFormularioSubmit" onClick={console.log()}/>
 

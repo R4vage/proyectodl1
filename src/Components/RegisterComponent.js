@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "../CSS/LoginComponent.css"
 
 
@@ -17,7 +17,7 @@ export default function RegisterComponent (){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (registerData.email.length === 0, registerData.password.length === 0, registerData.nombre.length === 0, registerData.apellido.length === 0)
+        if (registerData.email.length === 0 || registerData.password.length === 0 || registerData.nombre.length === 0 || registerData.apellido.length === 0)
         {
             alert("Debés completar todos los campos :(")  
         }
@@ -26,7 +26,12 @@ export default function RegisterComponent (){
             console.log(registerData)
         }
     };
-
+    useEffect(() => {
+        console.log("registerMount")
+        return () => {
+        console.log("registerUnmount")
+        };
+      },[]);
     
     return(
     <>
