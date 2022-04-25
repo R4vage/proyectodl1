@@ -5,7 +5,6 @@
     height: 100vh;
     position: fixed;
     display: flex;
-    flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -15,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     margin-block: auto;
-    margin-top: auto;
     margin-inline: auto;
     justify-content: center;
 }
@@ -31,10 +29,17 @@
     display: flex;
     flex-direction: column;
     background-color: var(--clr-light);
-    padding: 12%;
+    padding: 4vw;
     border-radius: 10px;
-    width: max-content;
+    width: 45vw;
     height: 100%;
+}
+@media(max-width: 1000px){
+    .loginFormulario{
+        width:60vw; 
+        padding: 6vw;
+     
+    }
 }
 @media(max-width: 680px){
     .loginFormulario{
@@ -42,6 +47,8 @@
         padding: 10vw;
     }
 }
+
+
 
 
 .loginFormularioSubtitle{
@@ -87,7 +94,15 @@
     all: none;
     appearance: none;
     border: none;
+    transition: transform 200ms ease-in-out, box-shadow 250ms ease-in-out;
 }
+.loginFormularioSelect:hover, .loginFormularioSelect:focus {
+    transform: scale(1.05);
+    box-shadow: var(--bs);
+    outline: none;
+  }
+
+
 
 
 .loginFormularioForgot{
@@ -102,6 +117,8 @@
 .loginFormularioForgot a:hover{
     text-decoration: underline;
 }
+
+
 
 
 .loginFormularioSubmit{

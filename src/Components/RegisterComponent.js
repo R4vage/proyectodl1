@@ -17,7 +17,7 @@ export default function RegisterComponent (){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (registerData.email.length == 0, registerData.password.length == 0, registerData.nombre.length == 0, registerData.apellido.length == 0)
+        if (registerData.email.length === 0, registerData.password.length === 0, registerData.nombre.length === 0, registerData.apellido.length === 0)
         {
             alert("Debés completar todos los campos :(")  
         }
