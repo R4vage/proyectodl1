@@ -15,7 +15,7 @@
   --clr-dark: hsl(0, 0%, 0%); /*Color oscuro*/
   --clr-accent: hsl(225, 71%, 44%); /* Color principal o acento */
   --clr-accentLessOpaque: hsla(225, 71%, 44%, 60%);
-  --clr-accentEndPoint: hsl(210, 39%, 59%); /* Color secundario. Aca coloqué una version mas clara del principal, cuando se decidan colores hay que cambiar el esquema */
+  --clr-accentEndPoint: hsl(225, 100%, 23%); /* Color secundario. Aca coloqué una version mas clara del principal, cuando se decidan colores hay que cambiar el esquema */
   --clr-gray: hsl(0, 0%, 40%);
   --clr-input: hsla(225, 71%, 44%, 10%);
 
@@ -50,4 +50,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.hidden {
+  display: none;
 }
