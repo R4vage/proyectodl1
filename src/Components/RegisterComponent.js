@@ -19,10 +19,10 @@ export default function RegisterComponent (){
         event.preventDefault();
         if (registerData.email.length == 0, registerData.password.length == 0, registerData.nombre.length == 0, registerData.apellido.length == 0)
         {
-            alert("Has fallado :(")  
+            alert("Debés completar todos los campos :(")  
         }
         else {
-            alert("Te has registrado con éxito")  
+            alert("Te has registrado con éxito :)")  
             console.log(registerData)
         }
     };
@@ -38,22 +38,22 @@ export default function RegisterComponent (){
 
                     <label className="loginFormularioInputContainer">
                         <h3>Nombre:</h3>
-                        <input type="text" name="nombre" className="loginFormularioInput" value={registerData.nombre} onChange={handleChange}/>
+                        <input type="text" name="nombre" className="loginFormularioInput" placeholder="Ingrese su nombre" value={registerData.nombre} onChange={handleChange}/>
                     </label>
 
                     <label className="loginFormularioInputContainer">
                         <h3>Apellido:</h3>
-                        <input type="text" name="apellido" className="loginFormularioInput" value={registerData.apellido} onChange={handleChange}/>
+                        <input type="text" name="apellido" className="loginFormularioInput" placeholder="Ingrese su apellido" value={registerData.apellido} onChange={handleChange}/>
                     </label>
 
                     <label className="loginFormularioInputContainer">
-                        <h3>Email:</h3>
-                        <input type="text" name="email" className="loginFormularioInput" value={registerData.email} onChange={handleChange}/>
+                        <h3>E-mail:</h3>
+                        <input type="text" name="email" className="loginFormularioInput" placeholder="Ingrese su e-mail" value={registerData.email} onChange={handleChange}/>
                     </label>
 
                     <label className="loginFormularioInputContainer">
                         <h3>Contraseña:</h3>
-                        <input type="password" name="password" className="loginFormularioInput" value={registerData.password}  onChange={handleChange}/>
+                        <input type="password" name="password" className="loginFormularioInput" placeholder="Ingrese su contraseña" value={registerData.password}  onChange={handleChange} />
                     </label>
 
                     <input type="submit" value="Registrarme" className="loginFormularioSubmit" onClick={console.log()}/>

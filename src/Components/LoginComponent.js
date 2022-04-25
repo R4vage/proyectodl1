@@ -7,7 +7,7 @@ export default function LoginComponent (){
     const [loginData, setLoginData] = useState({
         email: "",
         password: "",
-        estado:"profesor"
+        estado:""
     })
     const [loginState, setLoginState] = useState("")
 
@@ -51,20 +51,21 @@ export default function LoginComponent (){
                     <h3 className="loginFormularioSubtitle">Por favor, rellene los campos con sus credenciales únicas</h3>
                     <label className="loginFormularioInputContainer">
                         <h3>Email:</h3>
-                        <input type="text" name="email" className="loginFormularioInput" value={loginData.email} onChange={handleChange}/>
+                        <input type="text" name="email" className="loginFormularioInput" placeholder="Ingrese su e-mail" value={loginData.email} onChange={handleChange}/>
                     </label>
 
                     <label className="loginFormularioInputContainer">
                         <h3>Contraseña:</h3>
-                        <input type="password" name="password" className="loginFormularioInput" value={loginData.password}  onChange={handleChange}/>
+                        <input type="password" name="password" className="loginFormularioInput" placeholder="Ingrese su contraseña" value={loginData.password}  onChange={handleChange}/>
                     </label>
 
                     <select className="loginFormularioSelect" name="estado" value={loginData.estado} onChange={handleChange}>
+                        <option className="loginFormularioSelectPlaceholder" value="" disabled defaultValue hidden>Seleccione su ocupación</option>
                         <option value="profesor">Profesor</option>
                         <option value="alumno">Alumno</option>
                     </select>
 
-                    <h3 className="loginFormularioForgot" onClick={forgot}>Forgot password?</h3>
+                    <h3 className="loginFormularioForgot">¿Te olvidaste la contraseña? <a onClick={forgot}>Clickea aquí</a></h3>
 
                     <input type="submit" value="Login" className="loginFormularioSubmit" onClick={console.log()}/>
 
